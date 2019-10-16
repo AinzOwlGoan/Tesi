@@ -1,0 +1,31 @@
+\section{Implementazione}
+
+In questa sezione verranno sottolineate i frammenti più importanti del codice.
+\subsection{Apertura della Connessione con Java}
+\begin{lstlisting}[language=Java]
+private static final String PORT_NAMES[] = { 
+			"/dev/cu.usbmodem143301", // Mac OS X
+			"COM3", // Windows
+	};
+private static final int DATA_RATE = 9600;
+
+serialPort = (SerialPort) portId.open(this.getClass().getName(),
+					TIME_OUT);
+
+\end{lstlisting}
+Nel frammento di codice appena visto c'è la dichiarazione delle porte che si vanno ad utilizzare, il \textbf{DATA\_RATE}, ovvero la quantità di dati digitali che possono essere trasferiti su un canale in un determinato intervallo temporale e l'apertura della connessione tramite la funzione \textbf{portId.open}
+
+\subsection{Rilevazione presenza tag NFC Arduino}
+\begin{lstlisting}[language=c++]
+      NfcTag tag = nfc.read(); 
+      if(tag.hasNdefMessage())
+      {[...]    
+          NdefRecord record = message.getRecord(i);
+          int payloadLength = record.getPayloadLength();
+          byte payload[payloadLength];
+          record.getPayload(payload);
+          Serial.write(payload,payloadLength);
+        [...]}
+\end{lstlisting}
+In questo frammento di codice viene evidenziato come il chip NFC se presente viene scannerizzato e l'unica cosa che verrà presa sarà il payload e non l'intestazione! 
+\subsection{Scrittura su tag NFC}

@@ -1,0 +1,16 @@
+\section{Introduzione}
+
+\subsection{MyNBS}
+
+MyNBS (My NFC Bus Subscription) è un'applicazione sviluppata in Java con un'interfaccia grafica che permette la sottoscrizione di un abbonamento per i pullman o il controllo di un abbonamento già esistente. Abbiamo quindi due funzionalità che vanno a dividersi in molteplici step: 
+\\ \textbf{Sottoscrizione abbonamento}:
+\paragraph{1.} L'operatore inserisce i dati dell'utente e le zone volute per l'abbonamento in un'interfaccia grafica
+\paragraph{2.} L'operatore posizione sull'antenna NFC il tag, nel quale verranno scritti in maniera codificata i dati dell'utente.
+\bigskip
+\\\textbf{Controllo abbonamento}:
+\paragraph{1.} Il controllore seleziona la/e zona/e dove è in questo momento
+\paragraph{2.} Posizione sopra il lettore il tag NFC, sia che l'abbonamento è valido per quella zona che non è valido verrà segnalato, nel secondo caso verranno evidenziate le zone di validità dell'abbonamento.
+
+\subsection{Obiettivi}
+
+L'obiettivo principale è quello di avere con se un abbonamento facilmente trasportabile, poco ingombrante e sicuro, infatti tramite la tecnologia NFC e l'implementazione della crittografia è possibile avere un'autenticazione sicura ed evitare anche che qualcuno di esterno riesca ad interpretare i dati del chip anche se dovesse riuscire a copiarlo. Inoltre per le forze dell'ordine è molto più semplice controllare quel chip e i dati associati piuttosto che dover guardare una carta che andando avanti nel tempo subirebbe l'usura e risulterebbe quindi di difficile comprensione.

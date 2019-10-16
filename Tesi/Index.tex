@@ -7,8 +7,8 @@
 \linespread{1.5}
 \graphicspath{ {./Images/} }
 \usepackage{setspace}
-
-\usepackage{kantlipsum}
+\usepackage{listings}
+%% Package Numerazione
 \usepackage{fancyhdr}
 \fancyhf{} % clear all header and footers
 \renewcommand{\headrulewidth}{0pt} % remove the header rule
@@ -28,19 +28,36 @@
 \pagenumbering{gobble}
 
 \include{./Chapters/begin}
-    
+\pagenumbering{arabic}
 \newpage
+\thispagestyle{plain} % empty
+\mbox{}
+%\afterpage{\blankpage}
+ 
+\newpage
+
 \renewcommand{\baselinestretch}{1.5} 
   \newpage
- % \include{./chapters/dedica}
+ %\include{./chapters/dedica}
   \include{./Chapters/abstract}
 	% Tavola dei contenuti
   \tableofcontents
   \newpage
-  \pagenumbering{arabic}
 
-\include{./Chapters/White}
+\include{./Chapters/Introduzione}
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
 \include{./Chapters/Tecnologie}
-
-
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
+\include{./Chapters/Tecimp}
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
+\include{./Chapters/CodiceImportante}
+%\include{./Chapters/Esfunzionamento}
+%\include{./Chapters/SviluppiFuturi}
+%\include{./Chapters/Conclusione}
 \end{document}
