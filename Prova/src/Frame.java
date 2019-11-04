@@ -24,6 +24,7 @@ import gnu.io.SerialPortEventListener;
 import java.util.Enumeration;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.JCheckBox;
 
 public class Frame extends JFrame {
 
@@ -34,7 +35,9 @@ public class Frame extends JFrame {
 
 	private static int cnt = 0;
 	private static  String lettura = "";
-
+	private static  String zone = "";
+	private static String zz = "";
+	private static int[] zonemap = new int[5];
 	/**
 	 * Launch the application.
 	 */
@@ -55,6 +58,7 @@ public static void main(String[] args) {
 	});
 }
 public Frame() {
+	setTitle("Verifica abbonamento");
 	
     
 	SerialTest main = new SerialTest();			
@@ -81,6 +85,26 @@ public Frame() {
 	setContentPane(contentPane);
 	contentPane.setLayout(null);
 	
+	JCheckBox chckbxZona_0 = new JCheckBox("Zona 1");
+	chckbxZona_0.setBounds(6, 6, 75, 23);
+	contentPane.add(chckbxZona_0);
+	
+	JCheckBox chckbxZona_1 = new JCheckBox("Zona 2");
+	chckbxZona_1.setBounds(84, 6, 75, 23);
+	contentPane.add(chckbxZona_1);
+	
+	JCheckBox chckbxZona_2 = new JCheckBox("Zona 3");
+	chckbxZona_2.setBounds(159, 6, 75, 23);
+	contentPane.add(chckbxZona_2);
+	
+	JCheckBox chckbxZona_3 = new JCheckBox("Zona 4");
+	chckbxZona_3.setBounds(236, 6, 75, 23);
+	contentPane.add(chckbxZona_3);
+	
+	JCheckBox chckbxZona_4 = new JCheckBox("Zona 5");
+	chckbxZona_4.setBounds(316, 6, 75, 23);
+	contentPane.add(chckbxZona_4);
+	
 
 	abbonamento = new JTextField();
 	abbonamento.setBounds(108, 145, 225, 26);
@@ -89,21 +113,94 @@ public Frame() {
 	
 	abbonamento.setText("Pass NFC Tag");
 	
-	JButton btnLetturaSeriale = new JButton("Lettura Seriale");
+	JButton btnLetturaSeriale = new JButton("Lettura Abbonamento");
 	btnLetturaSeriale.addMouseListener(new MouseAdapter() {
 		@Override
 		public void mouseClicked(MouseEvent e) {
+			
 			lettura = main.ret;
+			zone = main.zones;
+			
+					
 			System.out.println(lettura.toString());
+			System.out.println(zone.toString());
+		
+			int j = 0;
+			if(chckbxZona_0.isSelected()) {
+				zonemap[j] = 1;
+				j++;
+			}
+			if(chckbxZona_1.isSelected()) {
+				zonemap[j] = 2;
+				j++;
+			}
+			if(chckbxZona_2.isSelected()) {
+				zonemap[j] = 3;
+				j++;
+			}
+			if(chckbxZona_3.isSelected()) {
+				zonemap[j] = 4;
+				j++;
+			}
+			if(chckbxZona_4.isSelected()) {
+				zonemap[j] = 5;
+				j++;
+			}
+			
+			
+			int check = 0;
 			if(lettura.equals("Abbonamento riconosciuto")) {
-				abbonamento.setText("Abbonamento riconosciuto");
+				
+				
+				// da un lato ho le zone selezionate e dall'altro ho le zone dell'abbonamento, ora devo fare il controllo
+				for(int i=0; i<zone.length(); i++) {
+					
+					zz+=zone.charAt(i);
+				}
+				
+				int reallength = 0;
+				for(int i = 0; i<zonemap.length; i++) {
+					if(zonemap[i] != 0)
+						reallength++;
+				}
+				
+			/*	System.out.println("STAMPA ZONE INIZIO:");
+				System.out.println("LUNGHEZZA ZONE :"+Integer.toString(zonemap.length));
+				for(int i = 0; i<zonemap.length;i++)
+				{
+					
+					String actualzone = Integer.toString(zonemap[i]);
+					System.out.println("ZONA: "+actualzone);
+				}
+				System.out.print("STAMPA ZONE FINE"); */
+				for(int i = 0; i<reallength; i++) {
+					
+					String actualzone = Integer.toString(zonemap[i]);
+					
+					if(zz.contains(actualzone))
+					{
+						check = 1;
+						break;
+					}
+						
+				}			
+				if(check == 1)
+				{
+					abbonamento.setText("Abbonamento riconosciuto");
+				}
+				else {
+					
+					//abbonamento.setText(zz);
+					abbonamento.setText("Zone non valide");
+				}
+				
 			}else {
 				
 				abbonamento.setText("Abbonamento da inserire");
 			}
 		}
 	});
-	btnLetturaSeriale.setBounds(148, 82, 117, 29);
+	btnLetturaSeriale.setBounds(148, 84, 169, 29);
 	contentPane.add(btnLetturaSeriale);
 	
 

@@ -1,5 +1,6 @@
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import gnu.io.CommPortIdentifier; 
@@ -12,14 +13,16 @@ import java.util.Enumeration;
 public class SerialTest implements SerialPortEventListener {
 	SerialPort serialPort;
 	
-
+// mettere un db nosql
+// oppure trovare un modo per crittografare
 	public static String ret = "R";
-
+	public static String zones = "JJ";
+	public static String scritturaZone = "AS";
+	public static boolean ch = false;
+	public static byte []zoneatt;
 		/** The port we're normally going to use. */
 	private static final String PORT_NAMES[] = { 
-			"/dev/cu.usbmodem143201", // Mac OS X
-                        "/dev/ttyACM0", // Raspberry Pi
-			"/dev/ttyUSB0", // Linux
+			"/dev/cu.usbmodem143301", // Mac OS X
 			"COM3", // Windows
 	};
 	/**
@@ -91,7 +94,12 @@ public class SerialTest implements SerialPortEventListener {
 			serialPort.close();
 		}
 	}
-
+	public void settaAbbonamento(String zone) {
+		
+		scritturaZone = zone;
+		
+		//System.out.println("SETTAZONE DICE:"+scritturaZone);
+	}
 	/**
 	 * Handle an event on the serial port. Read the data and print it.
 	 */
@@ -105,9 +113,49 @@ public class SerialTest implements SerialPortEventListener {
 				System.out.println(inputLine);
 				int a = 0;
 				// To Modify
-				if(inputLine.contains("AB2019")) 
+			//	System.out.print("TESTTTT"+inputLine+" lungaaaa "+inputLine.length());
+				if(inputLine.contains("AB")) 
 				{
-					a = 1;
+					//if(inputLine.substring(0,2).contains("AB")) 
+					
+						int []zoneDivision = new int[inputLine.length()/2];
+						// sapendo la lunghezza posso sapere quante zone ci sono 
+						// ricordandosi che ogni zona occupa 2 caratteri se è lungo 10 -> 4 zone
+						int numerozone = (inputLine.length()-2)/2;
+						int j = 0;
+						int inizio = 3;
+						int fine = inputLine.length();
+						for(int i = 3; i<inputLine.length(); i++) {
+							
+							char valoreI = inputLine.charAt(i);
+							if((valoreI == '0') && (ch == false)) {
+								inizio = i;
+								ch = true;
+								}
+							if((valoreI == 'A')&& (ch == true)) {
+								fine = i;
+								break;
+							}
+							
+						}
+						System.out.println("PARTENZA: "+inizio+" FINE: "+fine);
+						for(int i = inizio; i<fine; i+=2) {
+							
+							char partial1 = inputLine.charAt(i);
+							char partial2 = inputLine.charAt(i+1);
+							
+							// vado ad identificare la zona
+							String zone = Character.toString(partial1) + Character.toString(partial2);
+							
+							// ottengo la zona!
+							zoneDivision[j] = Integer.parseInt(zone);
+							
+							j++;
+					} zones="";
+					for(int i = 0; i< zoneDivision.length; i++) {
+						zones += zoneDivision[i];
+					}
+					
 					ret = "Abbonamento riconosciuto";
 					
 					output.write(b);
@@ -122,9 +170,25 @@ public class SerialTest implements SerialPortEventListener {
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}
-		}
-		// Ignore all the other eventTypes, but you should consider the other ones.
+		} 
+	/*	zoneatt = scritturaZone.getBytes();
+		try {
+			String inputLine=input.readLine();
+			System.out.println(inputLine);
+			
+			if(inputLine.equals("Successo"))
+				ch = true;
+			
+			//System.out.println("INSIEME ZONE: "+scritturaZone);
+			output.write(zoneatt);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}}*/
+		
 	}
+		// Ignore all the other eventTypes, but you should consider the other ones.
+	
 
 	public static void main(String[] args) throws Exception {
 		SerialTest main = new SerialTest();
