@@ -17,7 +17,7 @@ void loop(void)
 {
   String s = Serial.readString();
   if(s.equals("conversion"))
-    Serial.println("\n Abbonamento riconosciuto\n");
+    Serial.println("\nAbbonamento riconosciuto\n");
   else
     Serial.println("\nScan an NFC tag\n");
   if (nfc.tagPresent()) 
