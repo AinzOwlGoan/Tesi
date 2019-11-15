@@ -17,7 +17,7 @@ public class App {
 		System.out.println("Connecting to IP Address " + ipAddress + ":" + port + "...");
 		client.connect(ipAddress, port);
 			
-		EmployeePersistence ep = new EmployeePersistence(client);
+		/*EmployeePersistence ep = new EmployeePersistence(client);
  
 		ep.persistEmployee(
 				UUIDs.timeBased(),
@@ -28,9 +28,19 @@ public class App {
 				12500, 
 				new String("no mail"), 
 				new String("ok"));
-		 
-		System.out.println(client.esegui());
+		 */
+		Abbonamento ab = new Abbonamento(client);
+		ab.Abbonato( UUIDs.timeBased(),
+				new String("12212"), 
+				new String("Daniele"), 
+				new String("Ravasio"), 
+				new String("Casa mia") 
 				
+				);
+		
+		
+		System.out.println(client.esegui());
+		System.out.println(client.esegui());		
 		client.close();
 	}
 }

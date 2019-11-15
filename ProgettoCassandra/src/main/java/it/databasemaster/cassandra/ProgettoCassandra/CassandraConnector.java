@@ -17,7 +17,9 @@ public class CassandraConnector {
 	private Cluster cluster;
 	private Session session;
  
+	
 	public void connect(final String node, final int port) {
+		
 		CodecRegistry codecRegistry = new CodecRegistry();
 		codecRegistry.register(new DateCodec(TypeCodec.date(), Date.class));
 		cluster = Cluster.builder().addContactPoint(node).withPort(port).withCodecRegistry(codecRegistry).build();
@@ -28,6 +30,8 @@ public class CassandraConnector {
 			System.out.printf("Datacenter: %s; Host: %s; Rack: %s\n",
 					host.getDatacenter(), host.getAddress(), host.getRack());
 		}
+		
+		
 		session = cluster.connect();
 	}
  
@@ -35,7 +39,7 @@ public class CassandraConnector {
 	
 		String out = "ciao";
 		
-		Row result = session.execute("SELECT email FROM HR.employees").one();
+		Row result = session.execute("SELECT nome FROM abbonamento.abb").one();
 		
 		out = result.toString();
 			      
