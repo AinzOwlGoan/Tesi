@@ -29,3 +29,25 @@ Nel frammento di codice appena visto c'è la dichiarazione delle porte che si va
 \end{lstlisting}
 In questo frammento di codice viene evidenziato come il chip NFC se presente viene scannerizzato e l'unica cosa che verrà presa sarà il payload e non l'intestazione! 
 \subsection{Scrittura su tag NFC}
+\subsection{Connessione al DB NoSQL}
+\begin{lstlisting}[language=Java]
+public void connect(final String node, final int port) {
+		CodecRegistry codecRegistry = new CodecRegistry();
+		codecRegistry.register(new DateCodec(TypeCodec.date(),
+		 Date.class));
+		cluster = Cluster.builder().addContactPoint(node).
+		withPort(port).withCodecRegistry(codecRegistry).build();
+ 
+		final Metadata metadata = cluster.getMetadata();
+	 [...]
+		session = cluster.connect();
+	}
+\end{lstlisting}
+In questo frammento di codice viene mostrato il metodo con il quale viene fatta la connessione al database NoSQL Cassandra!
+\subsection{Avvio di Cassandra}
+\begin{lstlisting}[language=C]
+ ~ % source ~/.bash_profile
+
+~ % cassandra -f 
+\end{lstlisting}
+Accedendo al terminale vengono lanciati questi comandi per l'avvio del processo di \textbf{Cassandra}
