@@ -1,4 +1,34 @@
-\BOOKMARK [1][-]{section.1}{Strumenti utilizzati}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Arduino Uno}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{NFC Shield v2.0}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{NFC Tag}{section.1}% 4
+\BOOKMARK [1][-]{section.1}{Introduzione}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Idea}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{MyNBS}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Obiettivi}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Strumenti utilizzati}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Arduino Uno}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{NFC Shield v2.0}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{NFC Tag}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Tipologie di tag}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Standard ISO}{subsection.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.4}{ISO 14443}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Tecnologia Implementata}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{NDEF e Sicurezza}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Cosa viene firmato?}{subsection.3.1}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Sicurezza}{subsection.3.1}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Intercettazioni}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Modifica dei dati}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.5}{Man in the middle}{subsection.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.2}{Inserimento di falsi messaggi}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.3}{NoSQL Database}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.4}{WindowBuilder}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.5}{Cassandra}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.6}{UUID}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.7}{Crittografia}{section.3}% 24
+\BOOKMARK [1][-]{section.4}{Implementazione}{}% 25
+\BOOKMARK [2][-]{subsection.4.1}{Apertura della Connessione con Java}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.2}{Rilevazione presenza tag NFC Arduino}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.3}{Scrittura su tag NFC}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.4}{Connessione al DB NoSQL}{section.4}% 29
+\BOOKMARK [2][-]{subsection.4.5}{Avvio di Cassandra}{section.4}% 30
+\BOOKMARK [1][-]{section.5}{Sviluppi futuri}{}% 31
+\BOOKMARK [2][-]{subsection.5.1}{Applicazione per smartphone}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.2}{Apple pay, Google pay}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.3}{Uso di altre tecnologie}{section.5}% 34

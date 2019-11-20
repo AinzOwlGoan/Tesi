@@ -1,86 +1,92 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {section}{\numberline {1}Introduzione}{6}% 
-\contentsline {subsection}{\numberline {1.1}Idea}{6}% 
-\contentsline {subsection}{\numberline {1.2}MyNBS}{6}% 
+\contentsline {section}{\numberline {1}Introduzione}{5}% 
+\contentsline {subsection}{\numberline {1.1}Idea}{5}% 
+\contentsline {subsection}{\numberline {1.2}MyNBS}{5}% 
+\contentsline {paragraph}{1.}{5}% 
+\contentsline {paragraph}{2.}{5}% 
 \contentsline {paragraph}{1.}{6}% 
 \contentsline {paragraph}{2.}{6}% 
-\contentsline {paragraph}{1.}{7}% 
-\contentsline {paragraph}{2.}{7}% 
-\contentsline {subsection}{\numberline {1.3}Obiettivi}{7}% 
-\contentsline {section}{\numberline {2}Strumenti utilizzati}{9}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
-\contentsline {subsection}{\numberline {2.1}Arduino Uno}{9}% 
-\contentsline {subsection}{\numberline {2.2}NFC Shield v2.0}{10}% 
-\contentsline {subsection}{\numberline {2.3}NFC Tag}{10}% 
-\contentsline {subsubsection}{\numberline {2.3.1}Tipologie di tag}{11}% 
+\contentsline {subsection}{\numberline {1.3}Obiettivi}{6}% 
+\contentsline {section}{\numberline {2}Strumenti utilizzati}{8}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
+\contentsline {subsection}{\numberline {2.1}Arduino Uno}{8}% 
+\contentsline {subsection}{\numberline {2.2}NFC Shield v2.0}{9}% 
+\contentsline {subsection}{\numberline {2.3}NFC Tag}{9}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Tipologie di tag}{10}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{10}% 
+\contentsline {subparagraph}{-}{10}% 
+\contentsline {subparagraph}{-}{10}% 
+\contentsline {subparagraph}{-}{10}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{10}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{10}% 
+\contentsline {subparagraph}{-}{10}% 
+\contentsline {subparagraph}{-}{11}% 
+\contentsline {subparagraph}{-}{11}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{11}% 
 \contentsline {subparagraph}{-}{11}% 
 \contentsline {subparagraph}{-}{11}% 
 \contentsline {subparagraph}{-}{11}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{11}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{11}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{11}% 
 \contentsline {subparagraph}{-}{11}% 
-\contentsline {subparagraph}{-}{12}% 
-\contentsline {subparagraph}{-}{12}% 
+\contentsline {subparagraph}{-}{11}% 
+\contentsline {subparagraph}{-}{11}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{11}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{12}% 
 \contentsline {subparagraph}{-}{12}% 
 \contentsline {subparagraph}{-}{12}% 
 \contentsline {subparagraph}{-}{12}% 
-\contentsline {subparagraph}{\IeC {\textbullet }}{12}% 
-\contentsline {subparagraph}{-}{12}% 
-\contentsline {subparagraph}{-}{12}% 
-\contentsline {subparagraph}{-}{12}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Standard ISO}{12}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{12}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{13}% 
-\contentsline {subparagraph}{-}{13}% 
-\contentsline {subparagraph}{-}{13}% 
-\contentsline {subparagraph}{-}{13}% 
-\contentsline {subsubsection}{\numberline {2.3.2}Standard ISO}{13}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{13}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{13}% 
-\contentsline {section}{\numberline {3}Tecnologia Implementata}{15}% 
-\contentsline {subsection}{\numberline {3.1}NDEF e Sicurezza}{15}% 
-\contentsline {paragraph}{Header}{15}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{12}% 
+\contentsline {section}{\numberline {3}Tecnologia Implementata}{14}% 
+\contentsline {subsection}{\numberline {3.1}NDEF e Sicurezza}{14}% 
+\contentsline {paragraph}{Header}{14}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{14}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{14}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{14}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{14}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{14}% 
 \contentsline {subparagraph}{\IeC {\textbullet }}{15}% 
 \contentsline {subparagraph}{\IeC {\textbullet }}{15}% 
 \contentsline {subparagraph}{\IeC {\textbullet }}{15}% 
 \contentsline {subparagraph}{\IeC {\textbullet }}{15}% 
-\contentsline {subparagraph}{\IeC {\textbullet }}{15}% 
-\contentsline {subparagraph}{\IeC {\textbullet }}{16}% 
-\contentsline {subparagraph}{\IeC {\textbullet }}{16}% 
-\contentsline {subparagraph}{\IeC {\textbullet }}{16}% 
-\contentsline {subparagraph}{\IeC {\textbullet }}{16}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
-\contentsline {subsubsection}{\numberline {3.1.1}Cosa viene firmato?}{17}% 
-\contentsline {subsubsection}{\numberline {3.1.2}Sicurezza}{17}% 
-\contentsline {subsubsection}{\numberline {3.1.3}Intercettazioni}{18}% 
-\contentsline {subsubsection}{\numberline {3.1.4}Modifica dei dati}{18}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Cosa viene firmato?}{16}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Sicurezza}{16}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Intercettazioni}{17}% 
+\contentsline {paragraph}{i}{17}% 
+\contentsline {paragraph}{ii}{17}% 
+\contentsline {paragraph}{iii}{17}% 
+\contentsline {subsubsection}{\numberline {3.1.4}Modifica dei dati}{17}% 
 \contentsline {subsubsection}{\numberline {3.1.5}Man in the middle}{18}% 
-\contentsline {subsection}{\numberline {3.2}Inserimento di falsi messaggi}{18}% 
-\contentsline {subsection}{\numberline {3.3}NoSQL Database}{18}% 
-\contentsline {subsection}{\numberline {3.4}WindowBuilder}{19}% 
-\contentsline {subsection}{\numberline {3.5}Cassandra}{19}% 
+\contentsline {subsection}{\numberline {3.2}NoSQL Database}{18}% 
+\contentsline {subsection}{\numberline {3.3}WindowBuilder}{18}% 
+\contentsline {subsection}{\numberline {3.4}Cassandra}{19}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
-\contentsline {subsection}{\numberline {3.6}UUID}{20}% 
-\contentsline {subsection}{\numberline {3.7}Crittografia}{20}% 
-\contentsline {section}{\numberline {4}Implementazione}{22}% 
-\contentsline {subsection}{\numberline {4.1}Apertura della Connessione con Java}{22}% 
-\contentsline {subsection}{\numberline {4.2}Rilevazione presenza tag NFC Arduino}{22}% 
-\contentsline {subsection}{\numberline {4.3}Scrittura su tag NFC}{23}% 
-\contentsline {subsection}{\numberline {4.4}Connessione al DB NoSQL}{23}% 
-\contentsline {subsection}{\numberline {4.5}Avvio di Cassandra}{23}% 
-\contentsline {section}{\numberline {5}Sviluppi futuri}{24}% 
-\contentsline {subsection}{\numberline {5.1}Applicazione per smartphone}{24}% 
-\contentsline {subsection}{\numberline {5.2}Apple pay, Google pay}{24}% 
-\contentsline {subsection}{\numberline {5.3}Uso di altre tecnologie}{24}% 
+\contentsline {subsection}{\numberline {3.5}UUID}{20}% 
+\contentsline {subsubsection}{\numberline {3.5.1}Come \IeC {\`e} formato?}{20}% 
+\contentsline {subsubsection}{\numberline {3.5.2}Analisi a livello matematico}{21}% 
+\contentsline {subsection}{\numberline {3.6}Crittografia}{21}% 
+\contentsline {section}{\numberline {4}Implementazione}{23}% 
+\contentsline {subsection}{\numberline {4.1}Apertura della Connessione con Java}{23}% 
+\contentsline {subsection}{\numberline {4.2}Rilevazione presenza tag NFC Arduino}{23}% 
+\contentsline {subsection}{\numberline {4.3}Scrittura su tag NFC}{24}% 
+\contentsline {subsection}{\numberline {4.4}Connessione al DB NoSQL}{24}% 
+\contentsline {subsection}{\numberline {4.5}Avvio di Cassandra}{24}% 
+\contentsline {subsection}{\numberline {4.6}Scrittura nel DB dei dati}{24}% 
+\contentsline {subsection}{\numberline {4.7}Algoritmo di Cifratura}{24}% 
+\contentsline {section}{\numberline {5}Sviluppi futuri}{25}% 
+\contentsline {subsection}{\numberline {5.1}Applicazione per smartphone}{25}% 
+\contentsline {subsection}{\numberline {5.2}Apple pay, Google pay}{25}% 
+\contentsline {subsection}{\numberline {5.3}Uso di altre tecnologie}{25}% 

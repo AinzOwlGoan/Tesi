@@ -33,13 +33,19 @@ I campi che non vengono firmati sono MB/ME, questo perché se venissero firmati 
 \subsubsection{Sicurezza}
 La tecnologia NFC è un'evoluzione dell'RFID, da un lato risulta meno predisposta ad attacchi esterni ma dall'altro lato è soggetta alle problematiche di sicurezza del suo predecessore. Le possibili minacce di sicurezza a cui sono sottoposti sono quelle riguardanti l'acquisizione, o l'alterazione dei dati contenuti nel tag, queste minacce possono avvenire mediante interrogazioni fraudolente o mediante intercettazione delle informazioni grazie a ricevitori radio durante la lettura da parte di un lettore autorizzato.
 \subsubsection{Intercettazioni}
-da fare
+Nell'ambito dell'NFC ma soprattutto in maniera generale, nel campo delle comunicazioni wireless l'intercettazione dei dati è uno degli attacchi più comuni. Per effettuare quest'attacco serve attrezzatura progettata ad hoc, quindi antenne e lettori fatti su misura. Per quanto riguarda il caso specifico NFC è un attacco molto difficile da realizzare a causa sei seguenti fattori:
+\paragraph{i} potenza emessa dallo strumento sotto intercettazione
+\paragraph{ii} fattori ambientali
+\paragraph{iii} presenza della crittografia
+
+Quindi da questo capiamo che anche in base al tipo di tag \footnote{cap 2 par 2.3.1} un attacco può essere più facile o più difficile, per esempio un attacco su un tag di tipo 1 sarà molto più semplice che su un tag di tipo 4.
+\\Ci sono anche contromisure come per esempio quella di diminuire il campo magnetico, magari aumentando il fattore di direzionalità delle antenne, oppure usare algoritmi di cifratura per il messaggio, algoritmi per esempio AES.
 \subsubsection{Modifica dei dati}
-da fare
+La modifica dei dati è un problema molto pericoloso, questo perché risulta trasparente all'utente, ha come scopo quello di modificare i dati trasmessi e renderli "validi". Fortunatamente risulta un attacco molto difficile da eseguire perché bisognerebbe riuscire ad intercettare completamente ogni bit del messaggio e rimandarlo sulle frequenze precise, quindi ogni volta modulando il campo delle frequenze in modo specifico e diverso.
 \subsubsection{Man in the middle}
-da fare
-\subsection{Inserimento di falsi messaggi}
-da fare
+È uno degli attacchi più pericolosi, infatti può arrecare molti danni ai sistemi coinvolti. Mentre sysA e sysB stanno comunicando, in mezzo a loro arriva l'hacker usando un apparato esterno sysH. Durante la comunicazione sysH altera il dialogo che hanno sysA e sysB, mettendosi in mezzo e fingendosi sysA per sysB e sysB per sysA. La soluzione a questo attacco è quella di instaurare un canale sicuro, quindi usando una chiave per criptare i dati. 
+Potrebbe succede che sysH cerchi di negoziare una chiave ai due sistemi però è molto complesso perché richiederebbe la visibilità di sysH.
+
 \subsection{NoSQL Database}
 NoSQL è una tecnologia che promuove sistemi software dove la persistenza dei dati è in generale caratterizzata dal fatto di non utilizzare il modello relazionale. L'espressione "NoSQL" fa riferimento al linguaggio SQL, che è il più comune linguaggio di interrogazione dei dati nei database relazionali.
 \\Questi archivi di dati il più delle volte non richiedono uno schema fisso (schemaless), evitano spesso le operazioni di giunzione (join) e puntano a scalare in modo orizzontale. Gli accademici e gli articoli si riferiscono a queste basi di dati come memorizzazione strutturata (structured storage). Per il progetto è stata utilizzata questa tecnologia per tenere in memoria fisica (tramite un file con estensione .txt) gli abbonamenti dei vari utenti
@@ -62,4 +68,24 @@ Alle chiavi corrispondono dei valori, raggruppati in famiglie di colonne: una fa
 \paragraph{•} Elasticità: il throughput di lettura o scrittura scala linearmente con l'aggiunta di nuove macchine, senza downtime e senza interruzione di alcun applicativo.
 
 \subsection{UUID}
+Un UUID\footnote{https://tools.ietf.org/html/rfc4122} conosciuto anche come Universally Unique Identifier, è un numero di 128 bit utilizzato per identificare informazioni nei sistemi informatici, lo si può trovare nell'rfc 4122.
+\subsubsection{Come è formato?}
+Il codice è composto da 16 byte, solitamente viene identificato da 32 caratteri esadecimali, a livello di sicurezza assume $ 3 \cdot 10^{38}$ possibili combinazioni
+\begin{center}
+\includegraphics[scale=0.5]{uuid}
+\end{center}
+A differenza di altri sistemi l'unicità del codice generato non dipende da un'autorità centrale di registrazione o dal coordinamento delle parti che lo generano, però la sua probabilità di essere duplicato è talmente vicina a zero che viene considerata trascurabile.
+
+\subsubsection{Analisi a livello matematico}
+
+Considerando i 128 bit dell'UUID versione 4, 6 bit vengono riservati, quattro per la versione e due per altri parametri, quindi un UUID generato randomicamente ha 122 bit casuali. La probabilità che due UUID hanno lo stesso valore può essere calcolata usando la teoria delle probabilità (Paradosso del compleanno \footnote{https://betterexplained.com/articles/understanding-the-birthday-paradox/}). Usando quindi quest'approssimazione possiamo calcolare:
+\begin{equation}
+p(n) \approx 1- e^{-\frac{n^2}{2\cdot 2^x}}
+\end{equation}
+Notiamo quindi che quando il termine $ \frac{n^2}{2\cdot 2^x}$ è vicino allo zero, la probabilità può essere direttamente approssimata in questo modo:
+\begin{equation}
+p(n) \approx \frac{n^2}{2\cdot 2^x}
+\end{equation}
+Analizzandolo quindi in modo numerico potremo pensare che anche generando 1 miliardo di UUID ogni secondo per i prossimi 100 anni la probabilità di creare almeno un duplicato sarebbe circa del 50\%
+
 \subsection{Crittografia}

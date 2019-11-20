@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  18 NOV 2019 21:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  20 NOV 2019 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -205,26 +205,26 @@ s
 \f@nch@O@olf=\skip53
 \f@nch@O@orf=\skip54
 )
-(./Index.aux (./Chapters/begin.aux) (./chapters/dedica.aux)
-(./Chapters/abstract.aux) (./Chapters/Introduzione.aux)
-(./Chapters/Tecnologie.aux) (./Chapters/Tecimp.aux)
-(./Chapters/CodiceImportante.aux) (./Chapters/sviluppiFuturi.aux))
+(./Index.aux (./Chapters/begin.aux) (./Chapters/abstract.aux)
+(./Chapters/Introduzione.aux) (./Chapters/Tecnologie.aux)
+(./Chapters/Tecimp.aux) (./Chapters/CodiceImportante.aux)
+(./Chapters/sviluppiFuturi.aux))
 \openout1 = `Index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Info: Redefining \it@ocap on input line 30.
-LaTeX Info: Redefining \it@ccap on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Info: Redefining \it@ocap on input line 32.
+LaTeX Info: Redefining \it@ccap on input line 32.
 
 
 File italian.ldf warning: 
@@ -232,7 +232,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 30.
+italian.ldf    on input line 32.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -360,34 +360,33 @@ s/logo-unibg.png>]) [1
 
 
 ]
-\openout2 = `./chapters/dedica.aux'.
-
- (./chapters/dedica.tex) [2
-
-]
 \openout2 = `./Chapters/abstract.aux'.
 
- (./Chapters/abstract.tex) [3
+ (./Chapters/abstract.tex) [2
 
-
-] (./Index.toc [4
+] (./Index.toc [3
 
 ])
 \tf@toc=\write3
 \openout3 = `Index.toc'.
 
- [5]
+
+[4]
 \openout2 = `./Chapters/Introduzione.aux'.
 
- (./Chapters/Introduzione.tex [6
+ (./Chapters/Introduzione.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
-]) [7] [8
+ []
+
+[5
+
+]) [6] [7
 
 ]
 \openout2 = `./Chapters/Tecnologie.aux'.
 
-
-(./Chapters/Tecnologie.tex
+ (./Chapters/Tecnologie.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
@@ -395,15 +394,15 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 4.
-<./Images/arduino.jpg, id=39, 602.25pt x 451.6875pt>
+<./Images/arduino.jpg, id=36, 602.25pt x 451.6875pt>
 File: ./Images/arduino.jpg Graphic file (type jpg)
 <use ./Images/arduino.jpg>
 Package pdftex.def Info: ./Images/arduino.jpg  used on input line 13.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
- [9
+ [8
 
  <./Images/arduino.jpg>]
-<./Images/shield.jpg, id=44, 501.875pt x 501.875pt>
+<./Images/shield.jpg, id=41, 501.875pt x 501.875pt>
 File: ./Images/shield.jpg Graphic file (type jpg)
 <use ./Images/shield.jpg>
 Package pdftex.def Info: ./Images/shield.jpg  used on input line 18.
@@ -411,37 +410,43 @@ Package pdftex.def Info: ./Images/shield.jpg  used on input line 18.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./Images/shield.jpg>] [11] [12]) [13] [14
+ [9 <./Images/shield.jpg>] [10] [11]) [12] [13
 
 ]
 \openout2 = `./Chapters/Tecimp.aux'.
 
  (./Chapters/Tecimp.tex
-<./Images/ndefstructure.png, id=62, 538.01pt x 481.8pt>
+<./Images/ndefstructure.png, id=59, 538.01pt x 481.8pt>
 File: ./Images/ndefstructure.png Graphic file (type png)
 <use ./Images/ndefstructure.png>
 Package pdftex.def Info: ./Images/ndefstructure.png  used on input line 6.
 (pdftex.def)             Requested size: 242.10226pt x 216.80798pt.
- [15
+ [14
 
  <./Images/ndefstructure.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-<./Images/ndefsign.png, id=67, 647.41875pt x 573.14125pt>
+<./Images/ndefsign.png, id=64, 647.41875pt x 573.14125pt>
 File: ./Images/ndefsign.png Graphic file (type png)
 <use ./Images/ndefsign.png>
 Package pdftex.def Info: ./Images/ndefsign.png  used on input line 27.
 (pdftex.def)             Requested size: 291.33574pt x 257.91118pt.
-[16] [17 <./Images/ndefsign.png>] [18]
-<./Images/cassandra.png, id=79, 1284.8pt x 861.2175pt>
+[15] [16 <./Images/ndefsign.png>] [17] [18]
+<./Images/cassandra.png, id=81, 1284.8pt x 861.2175pt>
 File: ./Images/cassandra.png Graphic file (type png)
 <use ./Images/cassandra.png>
-Package pdftex.def Info: ./Images/cassandra.png  used on input line 54.
+Package pdftex.def Info: ./Images/cassandra.png  used on input line 60.
 (pdftex.def)             Requested size: 192.71169pt x 129.17705pt.
- [19 <./Images/cassandra.png>]) [20]
-[21
+ [19 <./Images/cassandra.png>]
+<./Images/uuid.png, id=86, 455.7025pt x 114.4275pt>
+File: ./Images/uuid.png Graphic file (type png)
+<use ./Images/uuid.png>
+Package pdftex.def Info: ./Images/uuid.png  used on input line 75.
+(pdftex.def)             Requested size: 227.85068pt x 57.21361pt.
+
+[20 <./Images/uuid.png>]) [21] [22
 
 ]
 \openout2 = `./Chapters/CodiceImportante.aux'.
@@ -470,7 +475,7 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-) [22
+) [23
 
 ]
 Overfull \hbox (38.50784pt too wide) in paragraph at lines 35--36
@@ -497,37 +502,45 @@ Overfull \hbox (24.40787pt too wide) in paragraph at lines 41--42
 [][][][][][][][][][][][][][][] 
  []
 
-) [23]
+) [24]
 \openout2 = `./Chapters/sviluppiFuturi.aux'.
 
- (./Chapters/sviluppiFuturi.tex) [24
+ (./Chapters/sviluppiFuturi.tex) [25
 
 
-] (./Index.aux (./Chapters/begin.aux) (./chapters/dedica.aux) (./Chapters/abstr
-act.aux) (./Chapters/Introduzione.aux) (./Chapters/Tecnologie.aux) (./Chapters/
-Tecimp.aux)
+] (./Index.aux (./Chapters/begin.aux) (./Chapters/abstract.aux) (./Chapters/Int
+roduzione.aux)
+(./Chapters/Tecnologie.aux) (./Chapters/Tecimp.aux)
 (./Chapters/CodiceImportante.aux) (./Chapters/sviluppiFuturi.aux)) ) 
 Here is how much of TeX's memory you used:
- 5703 strings out of 492616
- 77701 string characters out of 6129482
- 360599 words of memory out of 5000000
- 9469 multiletter control sequences out of 15000+600000
- 10685 words of font info for 38 fonts, out of 8000000 for 9000
+ 5705 strings out of 492616
+ 77702 string characters out of 6129482
+ 360373 words of memory out of 5000000
+ 9477 multiletter control sequences out of 15000+600000
+ 11139 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,62p,790b,1137s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,62p,790b,1137s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local
 /texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local
 /texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/
 texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Index.pdf (25 pages, 696787 bytes).
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Index.pdf (26 pages, 800106 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 166 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
