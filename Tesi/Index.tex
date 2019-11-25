@@ -4,7 +4,9 @@
 \usepackage{bigints}
 \usepackage{graphicx}
 \usepackage{geometry} 
-
+\usepackage{float}
+\usepackage{url}
+\usepackage{xcolor}
 
 \geometry{a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm}
 \linespread{1.5}
@@ -16,7 +18,8 @@
 \fancyhf{} % clear all header and footers
 \renewcommand{\headrulewidth}{0pt} % remove the header rule
 \fancyfoot[LE,RO]{\thepage} % Left side on Even pages; Right side on Odd pages
-
+\setlength\parindent{24pt} % PER INDENTARE
+%\hspace{\parindent} % DA METTERE NEI SINGOLI PARAGRAFI
 \pagestyle{fancy}
 \fancypagestyle{plain}{%
   \fancyhf{}%

@@ -1,54 +1,60 @@
 \section{Implementazione}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-In questa sezione verranno sottolineate i frammenti più importanti del codice.
-\subsection{Apertura della Connessione con Java}
-\begin{lstlisting}[language=Java]
-private static final String PORT_NAMES[] = { 
-			"/dev/cu.usbmodem143301", // Mac OS X
-			"COM3", // Windows
-	};
-private static final int DATA_RATE = 9600;
+In questa sezione verranno mostrati i frammenti più importanti del codice
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+\subsection{Avvio del DB NoSQL}
+\lstinputlisting[language=bash]{./Code/avvio.sh}
 
-serialPort = (SerialPort) portId.open(this.getClass().getName(),
-					TIME_OUT);
-
-\end{lstlisting}
-Nel frammento di codice appena visto c'è la dichiarazione delle porte che si vanno ad utilizzare, il \textbf{DATA\_RATE}, ovvero la quantità di dati digitali che possono essere trasferiti su un canale in un determinato intervallo temporale e l'apertura della connessione tramite la funzione \textbf{portId.open}
-
-\subsection{Rilevazione presenza tag NFC Arduino}
-\begin{lstlisting}[language=c++]
-      NfcTag tag = nfc.read(); 
-      if(tag.hasNdefMessage())
-      {[...]    
-          NdefRecord record = message.getRecord(i);
-          int payloadLength = record.getPayloadLength();
-          byte payload[payloadLength];
-          record.getPayload(payload);
-          Serial.write(payload,payloadLength);
-        [...]}
-\end{lstlisting}
-In questo frammento di codice viene evidenziato come il chip NFC se presente viene scannerizzato e l'unica cosa che verrà presa sarà il payload e non l'intestazione! 
-\subsection{Scrittura su tag NFC}
-\subsection{Connessione al DB NoSQL}
-\begin{lstlisting}[language=Java]
-public void connect(final String node, final int port) {
-		CodecRegistry codecRegistry = new CodecRegistry();
-		codecRegistry.register(new DateCodec(TypeCodec.date(),
-		 Date.class));
-		cluster = Cluster.builder().addContactPoint(node).
-		withPort(port).withCodecRegistry(codecRegistry).build();
- 
-		final Metadata metadata = cluster.getMetadata();
-	 [...]
-		session = cluster.connect();
-	}
-\end{lstlisting}
-In questo frammento di codice viene mostrato il metodo con il quale viene fatta la connessione al database NoSQL Cassandra!
-\subsection{Avvio di Cassandra}
-\begin{lstlisting}[language=C]
-\sim % source \sim/.bash_profile
-~ % cassandra -f 
-\end{lstlisting}
 Automaticamente il controllore mettendo i suoi dati (validi) apre la connessione al database e va direttamente alla pagina di controllo degli abbonamenti
+\subsection{Creazione del Database}
+\lstinputlisting[language=bash]{./Code/CreazioneDB.sh}
+
+La creazione del database viene fatta una sola volta, prima del rilascio dell'applicazione. 
+\\Potrebbero succedere problemi hardware, oppure il link potrebbe perdere la connessione magari durante un processamento dei dati, per questo una soluzione è quella di avere un backup disponibile appena succede un problema, quindi i dati vengono replicati per assicurare che non ci siano fallimenti. Cassandra posiziona le repliche dei dati su nodi diversi in base a due fattori:
+\paragraph{•} Strategia di replicazione
+\paragraph{•} Fattore di replicazione
+Il primo dice dove posizionare le replica, il secondo invece determina quante repliche vengono posizionate, un esempio lo troviamo nella riga 4 dove abbiamo la stringa \textit{'replication\_factor' : 3}, questo indica che vengono fatte 3 repliche su 3 nodi diversi. Solitamente per garantire che non ci siano fallimenti il fattore di replicazione deve essere 3.
+\\Nella riga 3 vediamo la stringa \textit{'SimplyStrategy'}, questa viene usata quando abbiamo un solo data center, quindi la prima replica viene posizionata sul nodo selezionato dal partizionatore, dopo questo, le restanti repliche vengono posizionate in senso orario a partire dalla direzione del nodo.
+\subsection{Creazione tabella DB}
+\lstinputlisting[language=bash]{./Code/CreazioneTabella.sh}
+
+Anche questa parte di codice, come la creazione del database viene fatta una sola volta, prima del lancio dell'applicazione
+\subsection{Connessione al DB NoSQL}
+\lstinputlisting[language=Java]{./Code/Connessione.java}
+
+In questo frammento di codice viene mostrato il metodo con il quale viene fatta la connessione al database NoSQL Cassandra!
+\subsection{Apertura della connessione con la porta seriale in Java}
+\lstinputlisting[language=Java]{./Code/AperturaSeriale.java}
+
+Nel frammento di codice appena visto c'è la dichiarazione delle porte che si vanno ad utilizzare, il \textbf{DATA\_RATE}, ovvero la quantità di dati digitali che possono essere trasferiti su un canale in un determinato intervallo temporale e l'apertura della connessione tramite la funzione \textbf{portId.open}
+\subsection{Rilevamento presenza tag NFC Arduino}
+\lstinputlisting[language=c++]{./Code/RilevamentoPresenze.cpp}
+
+In questo frammento di codice viene evidenziato come il chip NFC se presente viene scannerizzato e l'unica cosa che verrà presa sarà il payload e non l'intestazione! 
+\subsection{Creazione abbonamento in Java}
+\lstinputlisting[language=Java]{./Code/CreazioneAbbonamento.java}
+
+\subsection{Scrittura abbonamento su tag NFC }
 \subsection{Scrittura nel DB dei dati}
-\subsection{Algoritmo di Cifratura}
