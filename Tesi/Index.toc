@@ -1,80 +1,82 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {section}{\numberline {1}Introduzione}{5}% 
-\contentsline {subsection}{\numberline {1.1}Idea}{5}% 
-\contentsline {subsection}{\numberline {1.2}MyNBS}{5}% 
+\contentsline {section}{\numberline {1}Introduzione}{4}% 
+\contentsline {subsection}{\numberline {1.1}Idea}{4}% 
+\contentsline {subsection}{\numberline {1.2}MyNBS}{4}% 
+\contentsline {paragraph}{1.}{4}% 
+\contentsline {paragraph}{2.}{4}% 
 \contentsline {paragraph}{1.}{5}% 
 \contentsline {paragraph}{2.}{5}% 
-\contentsline {paragraph}{1.}{6}% 
-\contentsline {paragraph}{2.}{6}% 
-\contentsline {subsection}{\numberline {1.3}Obiettivo}{6}% 
-\contentsline {section}{\numberline {2}Strumenti utilizzati}{8}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{8}% 
-\contentsline {subsection}{\numberline {2.1}Arduino Uno}{8}% 
-\contentsline {subsection}{\numberline {2.2}NFC Shield v2.0}{9}% 
-\contentsline {subsection}{\numberline {2.3}NFC Tag}{9}% 
-\contentsline {subsubsection}{\numberline {2.3.1}Tipologie di tag}{10}% 
+\contentsline {subsection}{\numberline {1.3}Obiettivo}{5}% 
+\contentsline {section}{\numberline {2}Strumenti utilizzati}{7}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{7}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{7}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{7}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{7}% 
+\contentsline {subsection}{\numberline {2.1}Arduino Uno}{7}% 
+\contentsline {subsection}{\numberline {2.2}NFC Shield v2.0}{8}% 
+\contentsline {subsection}{\numberline {2.3}NFC Tag}{8}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Tipologie di tag}{9}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
+\contentsline {subparagraph}{-}{9}% 
+\contentsline {subparagraph}{-}{9}% 
+\contentsline {subparagraph}{-}{9}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{9}% 
+\contentsline {subparagraph}{-}{9}% 
+\contentsline {subparagraph}{-}{9}% 
+\contentsline {subparagraph}{-}{10}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{10}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{10}% 
 \contentsline {subparagraph}{-}{10}% 
 \contentsline {subparagraph}{-}{10}% 
 \contentsline {subparagraph}{-}{10}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Standard ISO}{10}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{10}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{10}% 
-\contentsline {subparagraph}{-}{10}% 
-\contentsline {subparagraph}{-}{10}% 
-\contentsline {subparagraph}{-}{11}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{11}% 
+\contentsline {subsection}{\numberline {2.4}NoSQL Database}{11}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{11}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{11}% 
-\contentsline {subparagraph}{-}{11}% 
-\contentsline {subparagraph}{-}{11}% 
-\contentsline {subparagraph}{-}{11}% 
-\contentsline {subsubsection}{\numberline {2.3.2}Standard ISO}{11}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{11}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{12}% 
-\contentsline {section}{\numberline {3}Tecnologia Utilizzata}{14}% 
-\contentsline {subsection}{\numberline {3.1}NDEF e Sicurezza}{14}% 
-\contentsline {paragraph}{Header}{14}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{15}% 
-\contentsline {subsubsection}{\numberline {3.1.1}Cosa viene firmato?}{16}% 
-\contentsline {subsubsection}{\numberline {3.1.2}Sicurezza}{16}% 
-\contentsline {subsubsection}{\numberline {3.1.3}Intercettazioni}{16}% 
-\contentsline {paragraph}{i}{17}% 
-\contentsline {paragraph}{ii}{17}% 
-\contentsline {paragraph}{iii}{17}% 
-\contentsline {subsubsection}{\numberline {3.1.4}Modifica dei dati}{17}% 
-\contentsline {subsubsection}{\numberline {3.1.5}Man in the middle}{17}% 
-\contentsline {subsection}{\numberline {3.2}NoSQL Database}{18}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{18}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{18}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{18}% 
-\contentsline {subsection}{\numberline {3.3}WindowBuilder}{18}% 
-\contentsline {subsection}{\numberline {3.4}Cassandra}{19}% 
-\contentsline {subsubsection}{\numberline {3.4.1}CQLSH}{19}% 
+\contentsline {subsection}{\numberline {2.5}WindowBuilder}{11}% 
+\contentsline {subsection}{\numberline {2.6}Cassandra}{12}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{13}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{13}% 
+\contentsline {subsubsection}{\numberline {2.6.1}CQLSH}{13}% 
+\contentsline {section}{\numberline {3}Implementazione}{15}% 
+\contentsline {subsection}{\numberline {3.1}NDEF e Sicurezza}{15}% 
+\contentsline {paragraph}{Header}{15}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{16}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Cosa viene firmato?}{17}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Sicurezza}{17}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Intercettazioni}{17}% 
+\contentsline {paragraph}{i}{18}% 
+\contentsline {paragraph}{ii}{18}% 
+\contentsline {paragraph}{iii}{18}% 
+\contentsline {subsubsection}{\numberline {3.1.4}Modifica dei dati}{18}% 
+\contentsline {subsubsection}{\numberline {3.1.5}Man in the middle}{18}% 
+\contentsline {subsection}{\numberline {3.2}UUID}{19}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Come \IeC {\`e} formato?}{19}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Analisi a livello matematico}{19}% 
+\contentsline {subsection}{\numberline {3.3}Crittografia}{20}% 
+\contentsline {subsection}{\numberline {3.4}Analisi del codice}{20}% 
+\contentsline {subsubsection}{\numberline {3.4.1}Avvio del DB NoSQL}{20}% 
+\contentsline {subsubsection}{\numberline {3.4.2}Creazione del Database}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
-\contentsline {subsection}{\numberline {3.5}UUID}{20}% 
-\contentsline {subsubsection}{\numberline {3.5.1}Come \IeC {\`e} formato?}{20}% 
-\contentsline {subsubsection}{\numberline {3.5.2}Analisi a livello matematico}{20}% 
-\contentsline {subsection}{\numberline {3.6}Crittografia}{21}% 
-\contentsline {section}{\numberline {4}Implementazione}{23}% 
-\contentsline {subsection}{\numberline {4.1}Avvio del DB NoSQL}{23}% 
-\contentsline {subsection}{\numberline {4.2}Creazione del Database}{23}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{23}% 
-\contentsline {paragraph}{\IeC {\textbullet }}{23}% 
-\contentsline {subsection}{\numberline {4.3}Creazione tabella DB}{24}% 
-\contentsline {subsection}{\numberline {4.4}Connessione al DB NoSQL}{24}% 
-\contentsline {subsection}{\numberline {4.5}Apertura della connessione con la porta seriale in Java}{24}% 
-\contentsline {subsection}{\numberline {4.6}Rilevamento presenza tag NFC Arduino}{25}% 
-\contentsline {subsection}{\numberline {4.7}Creazione abbonamento in Java}{25}% 
-\contentsline {subsection}{\numberline {4.8}Scrittura abbonamento su tag NFC }{26}% 
-\contentsline {subsection}{\numberline {4.9}Scrittura nel DB dei dati}{26}% 
-\contentsline {section}{\numberline {5}Sviluppi futuri}{27}% 
-\contentsline {subsection}{\numberline {5.1}Applicazione per smartphone}{27}% 
-\contentsline {subsection}{\numberline {5.2}Apple pay, Google pay}{27}% 
-\contentsline {subsection}{\numberline {5.3}Uso di altre tecnologie}{27}% 
+\contentsline {subsubsection}{\numberline {3.4.3}Creazione tabella DB}{21}% 
+\contentsline {subsubsection}{\numberline {3.4.4}Connnessione al database mediante CQLSH}{21}% 
+\contentsline {subsubsection}{\numberline {3.4.5}Connessione al DB NoSQL}{21}% 
+\contentsline {subsubsection}{\numberline {3.4.6}Apertura della connessione con la porta seriale in Java}{22}% 
+\contentsline {subsubsection}{\numberline {3.4.7}Rilevamento presenza tag NFC Arduino}{22}% 
+\contentsline {subsubsection}{\numberline {3.4.8}Creazione abbonamento in Java}{22}% 
+\contentsline {subsubsection}{\numberline {3.4.9}Scrittura abbonamento nel Database}{23}% 
+\contentsline {subsubsection}{\numberline {3.4.10}Scrittura abbonamento su tag NFC }{24}% 
+\contentsline {section}{\numberline {4}Sviluppi futuri}{26}% 
+\contentsline {subsection}{\numberline {4.1}Applicazione per smartphone}{26}% 
+\contentsline {subsection}{\numberline {4.2}Apple pay, Google pay}{26}% 
+\contentsline {subsection}{\numberline {4.3}Uso di altre tecnologie}{26}% 
+\contentsline {section}{\numberline {5}Bibliografia}{28}% 

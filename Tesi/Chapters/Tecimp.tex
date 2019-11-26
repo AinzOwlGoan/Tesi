@@ -46,30 +46,6 @@ Quindi da questo capiamo che anche in base al tipo di tag \footnote{cap 2 par 2.
 \hspace{\parindent}È uno degli attacchi più pericolosi, infatti può arrecare molti danni ai sistemi coinvolti. Mentre sysA e sysB stanno comunicando, sysH, il dispisitivo dell'hacker, si interpone tra di loro. Durante la comunicazione sysH altera il dialogo che hanno sysA e sysB, mettendosi in mezzo e fingendosi sysA per sysB e sysB per sysA. La soluzione a questo attacco è quella di instaurare un canale sicuro, quindi usando una chiave per criptare i dati. 
 Potrebbe succede che sysH cerchi di negoziare una chiave ai due sistemi però è molto complesso perché richiederebbe la visibilità di sysH.
 
-\subsection{NoSQL Database}
-\hspace{\parindent} I database NoSQL (non relazionali), sono realizzati per modelli di dati specifici, hanno degli schemi flessibili, un'ottima facilità di sviluppo, una scalabilità orizzontale e delle prestazioni ottime. Si può pensare all'attuale diffusione dei sistemi cloud, quindi una diffusione dove ci sono moltissimi nodi e usare un RDMBS (database relazionale) in questi casi diventerebbe molto difficile. I principali metodi d'implementazione dei database NoSQL sono:
-\paragraph{•}Chiave-valore: I dati sono immagazzinati in un elemento che contiene una chiave oltre che i dati veri e propri, dal punto di vista implementativo questo è il metodo più semplice, però è anche quello meno efficiente nel caso nel quale le operazioni riguardano solo una parte dell'elemento e non l'elemento nel totale 
-\paragraph{•}Column family: i dati vengono organizzati in righe e colonne, non si ha il bisogno di definire il numero di colonne e una riga può avere molte colonne
-\paragraph{•}Document store: è un'evoluzione del metodo chiave-valore, i dati vengono salvati in un documento che può contenere un numero "infinito" di campi di "infinita" lunghezza, in questo modo riusciamo ad evitare sprechi di campi inutilizzati che andrebbero ad occupare spazio in memoria.
-
-\subsection{WindowBuilder}
-\hspace{\parindent}Per la realizzazione dell'interfaccia grafica in Java è stato usato il plug-in WindowBuilder di Eclipse. Questo plug-in è composto a partire dalle liberire SWT Designer e Swing Designer e rende comoda e veloce la creazione di interfacce grafiche (GUI) per le applicazioni Java. Usando il WYSIWYG visual designer e gli strumenti di layout è possibile creare finestre complesse, e per ogni elemento messo verrà generato il codice contente la posizione dell'elemento e la sua dichiarazione.
-\\Inoltre, il codice generato da questa libreria non richiede l'uso di altre librerie personalizzate per compilarlo ed eseguirlo, inoltre è possibile dall'interfaccia grafica creare eventi che poi andranno compilati mediante codice scritto in dei blocchi di \textit{ActionListener}, è possibile generare diversi tipi di eventi, dal click del mouse, alla pressione di un tasto sulla tastiera, o persino al movimento nella finestra del mouse.
-
-\subsection{Cassandra}
-\hspace{\parindent}Apache Cassandra è un DBMS distribuito e open source. Si tratta di un progetto Top-Level, sviluppato da Apache Software Foundation per gestire grandi quantità di dati dislocati in diversi server, fornendo un servizio orientato alla disponibilità.
-\\È una soluzione NoSQL che inizialmente fu sviluppata da Facebook, un modello di dati simile a BigTable in esecuzione su un'infrastruttura tipi Amazon-Dynamo. Cassandra fornisce una struttura di memorizzazione chiave-valore, con Eventual Consistency.
-\subsubsection{CQLSH}
-Reference\footnote{http://cassandra.apache.org/doc/latest/tools/cqlsh.html}
-\begin{center}
-\includegraphics[scale=0.15]{cassandra}
-\end{center}
-Alle chiavi corrispondono dei valori, raggruppati in famiglie di colonne: una famiglia di colonne è definita quando il database viene creato. Tuttavia le colonne possono essere aggiunte a una famiglia in qualsiasi momento.
-\\Le colonne sono aggiunte solo specificando le chiavi, così differenti chiavi possono avere differenti numeri di colonne in una data famiglia. I valori di una famiglia di colonne sono memorizzati insieme, questo perché Cassandra adotta un approccio ibrido tra DBMS orientato alle colonne e la memorizzazione orientata alle righe.
-\\Come caratteristiche principali abbiamo:
-\paragraph{•} Fault-tolerance: i dati vengono replicati in maniera automatica su più nodi, la replica è supportata tramite vari data center e la sostituzione dei nodi può avvenire senza downtime\footnote{la replicazione verrà trattata nel capitolo 4.2}.
-\paragraph{•} Tunable consistency: il livello di coerenza può essere modificato (da writes never fail a block for all replicas to be readable).
-
 \subsection{UUID}
 \hspace{\parindent}Un UUID\footnote{https://tools.ietf.org/html/rfc4122} conosciuto anche come Universally Unique Identifier, è un numero di 128 bit utilizzato per identificare informazioni nei sistemi informatici, lo si può trovare nell'rfc 4122.
 \subsubsection{Come è formato?}

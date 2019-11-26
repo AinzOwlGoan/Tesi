@@ -50,15 +50,27 @@ Prima di iniziare questa sezione è bene sapere che esistono solo cinque tipi di
 \paragraph{•} ISO 15693: Lo standard ISO 15693 utilizza la frequenza 13.56 MHz, viene offerta una distanza di lettura che può variare tra 1 metro ed 1.5 metri, poiché le carte devono operare a distanza, è richiesta la presenza di campi magnetici inferiori rispetto a quelli usati per altre carte. Inoltre a differenza di altri standard c'è una funzione di anticollisione implementata, questo serve per consentire una lettura simultanea di più card senza incorrere in errori o fail di ricezione.
 \paragraph{•} ISO 18092, definisce lo standard di una smartcard contactless, viene prevalentemente usato nei sistemi RFID (pre-NFC). Questa tecnologia  viene usata con i tag di tipo 4 quindi in Giappone. Questa specifica è formata dalle ISO 15693 (vista prima) e dalla ISO 9798 che regolamenta il protocollo di comunicazione a mutuo riconoscimento, questo implica che il tag può essere letto solo da un lettore già programmato.
 
-%\subsection{ISO 14443}
-%prova \footnote{http://google.com}
+\subsection{NoSQL Database}
+\hspace{\parindent} I database NoSQL (non relazionali), sono realizzati per modelli di dati specifici, hanno degli schemi flessibili, un'ottima facilità di sviluppo, una scalabilità orizzontale e delle prestazioni ottime. Si può pensare all'attuale diffusione dei sistemi cloud, quindi una diffusione dove ci sono moltissimi nodi e usare un RDMBS (database relazionale) in questi casi diventerebbe molto difficile. I principali metodi d'implementazione dei database NoSQL sono:
+\paragraph{•}Chiave-valore: I dati sono immagazzinati in un elemento che contiene una chiave oltre che i dati veri e propri, dal punto di vista implementativo questo è il metodo più semplice, però è anche quello meno efficiente nel caso nel quale le operazioni riguardano solo una parte dell'elemento e non l'elemento nel totale 
+\paragraph{•}Column family: i dati vengono organizzati in righe e colonne, non si ha il bisogno di definire il numero di colonne e una riga può avere molte colonne
+\paragraph{•}Document store: è un'evoluzione del metodo chiave-valore, i dati vengono salvati in un documento che può contenere un numero "infinito" di campi di "infinita" lunghezza, in questo modo riusciamo ad evitare sprechi di campi inutilizzati che andrebbero ad occupare spazio in memoria.
 
+\subsection{WindowBuilder}
+\hspace{\parindent}Per la realizzazione dell'interfaccia grafica in Java è stato usato il plug-in WindowBuilder di Eclipse. Questo plug-in è composto a partire dalle liberire SWT Designer e Swing Designer e rende comoda e veloce la creazione di interfacce grafiche (GUI) per le applicazioni Java. Usando il WYSIWYG visual designer e gli strumenti di layout è possibile creare finestre complesse, e per ogni elemento messo verrà generato il codice contente la posizione dell'elemento e la sua dichiarazione.
+\\Inoltre, il codice generato da questa libreria non richiede l'uso di altre librerie personalizzate per compilarlo ed eseguirlo, inoltre è possibile dall'interfaccia grafica creare eventi che poi andranno compilati mediante codice scritto in dei blocchi di \textit{ActionListener}, è possibile generare diversi tipi di eventi, dal click del mouse, alla pressione di un tasto sulla tastiera, o persino al movimento nella finestra del mouse.
 
-
-%\subsection{Java}
-%Java è un linguaggio di programmazione ad alto livello, orientato agli oggetti e a tipizzazione statica, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione (tramite compilazione in bytecode prima e interpretazione poi da parte di una JVM), la scelta di questo linguaggio è dovuta alla politica \textbf{WORA} ovvero Write Once, Run Anywhere. Infatti il risultato dell'elaborato è un file con estensione \textit{JAR} il quale rende possibile l'uso su ogni dispositivo a patto che abbia installato java
-%\subsection{Eclipse}
-%Eclipse è un ambiente di sviluppo integrato multi-linguaggio e multipiattaforma. Ideato da Ericsson, HP, IBM, Intel, MontaVista Software, QNX, SAP e Serena Software.
-%\\Eclipse può essere utilizzato per la produzione di software di vario genere, si passa infatti da un completo IDE per il linguaggio Java (che è quello usato in questo progetto) a un ambiente di sviluppo per il linguaggio C++  e a plug-in che permettono di aggiungere molteplici funzionalità all'ambiente di sviluppo.
-%\\La piattaforma di sviluppo è incentrata sull'uso di plug-in, delle componenti software ideate per uno specifico scopo, per esempio la generazione di diagrammi UML, ed in effetti tutta la piattaforma è un insieme di plug-in, versione base compresa, e chiunque può sviluppare e modificare i vari plug-in. Nella versione base è possibile programmare in Java, usufruendo di comode funzioni di aiuto quali: completamento automatico, suggerimento dei tipi di parametri dei metodi, possibilità di accesso diretto a CVS e riscrittura automatica del codice (Refactoring).
-%\\Essendo scritto in Java, Eclipse è disponibile per le piattaforme Linux, macOS, Windows e altri sistemi operativi.
+\subsection{Cassandra}
+\hspace{\parindent}Apache Cassandra è un DBMS distribuito e open source. Si tratta di un progetto Top-Level, sviluppato da Apache Software Foundation per gestire grandi quantità di dati dislocati in diversi server, fornendo un servizio orientato alla disponibilità.
+\\È una soluzione NoSQL che inizialmente fu sviluppata da Facebook, un modello di dati simile a BigTable in esecuzione su un'infrastruttura tipi Amazon-Dynamo. Cassandra fornisce una struttura di memorizzazione chiave-valore, con Eventual Consistency.
+\begin{center}
+\includegraphics[scale=0.15]{cassandra}
+\end{center}
+Alle chiavi corrispondono dei valori, raggruppati in famiglie di colonne: una famiglia di colonne è definita quando il database viene creato. Tuttavia le colonne possono essere aggiunte a una famiglia in qualsiasi momento.
+\\Le colonne sono aggiunte solo specificando le chiavi, così differenti chiavi possono avere differenti numeri di colonne in una data famiglia. I valori di una famiglia di colonne sono memorizzati insieme, questo perché Cassandra adotta un approccio ibrido tra DBMS orientato alle colonne e la memorizzazione orientata alle righe.
+\\Come caratteristiche principali abbiamo:
+\paragraph{•} Fault-tolerance: i dati vengono replicati in maniera automatica su più nodi, la replica è supportata tramite vari data center e la sostituzione dei nodi può avvenire senza downtime\footnote{la replicazione verrà trattata nel capitolo 3.4.2}.
+\paragraph{•} Tunable consistency: il livello di coerenza può essere modificato (da writes never fail a block for all replicas to be readable).
+\subsubsection{CQLSH}
+\hspace{\parindent}cqlsh\footnote{http://cassandra.apache.org/doc/latest/tools/cqlsh.html} è una shell a linea di comando per interagire con Cassandra attraverso il CQL (Cassandra Query Language), è inclusa con ogni versione di Cassandra, questa shell utilizza dei protocolli nativi di Python e permette la connessione al nodo specificato nella linea di comando \footnote{un esempio di connessione sarà trattato nel capitolo 3.4.4}.
+\\Generalmente parlando, il funzionamento di una data versione di cqlsh  è garantito solo con la versione di cassandra che lo ha rilasciato, ci possono essere casi particolari nei quali vengono rilasciati update per far lavorare un cqlsh datato con una nuova versione di Cassandra, però questo non è supportato ufficialmente.

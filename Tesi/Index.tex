@@ -7,7 +7,7 @@
 \usepackage{float}
 \usepackage{url}
 \usepackage{xcolor}
-
+\usepackage{enumitem}
 \geometry{a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm}
 \linespread{1.5}
 \graphicspath{ {./Images/} }
@@ -36,13 +36,17 @@
 \pagenumbering{gobble}
 
 \include{./Chapters/begin}
+
+
 \pagenumbering{arabic}
 \newpage
-\thispagestyle{plain} % empty
+\thispagestyle{empty} % empty
 \mbox{}
+
 %\afterpage{\blankpage}
  
 \newpage
+\addtocounter{page}{-1}
 
 \renewcommand{\baselinestretch}{1.5} 
   \newpage
@@ -67,14 +71,20 @@
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
-\include{./Chapters/Tecimp}
+%\include{./Chapters/Tecimp}
+%\newpage
+%\thispagestyle{plain} % empty
+%\mbox{}
+\include{./Chapters/CodiceImportante}
 \newpage
 \thispagestyle{plain} % empty
 \mbox{}
-\include{./Chapters/CodiceImportante}
 %\include{./Chapters/Esfunzionamento}
 \include{./Chapters/sviluppiFuturi}
-
+\newpage
+\thispagestyle{plain} % empty
+\mbox{}
+\include{./Chapters/Biblio}
 %\include{./Chapters/Conclusione}
 
 \end{document}
