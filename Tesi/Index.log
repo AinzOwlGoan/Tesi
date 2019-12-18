@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  26 NOV 2019 10:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.9)  12 DEC 2019 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -244,8 +244,9 @@ s
 \f@nch@O@orf=\skip55
 )
 (./Index.aux (./Chapters/begin.aux) (./Chapters/abstract.aux)
-(./Chapters/Introduzione.aux) (./Chapters/Tecnologie.aux)
-(./Chapters/CodiceImportante.aux) (./Chapters/sviluppiFuturi.aux))
+(./Chapters/dedica.aux) (./Chapters/Introduzione.aux)
+(./Chapters/Tecnologie.aux) (./Chapters/CodiceImportante.aux)
+(./Chapters/sviluppiFuturi.aux) (./Chapters/Biblio.aux))
 \openout1 = `Index.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -399,16 +400,21 @@ s/logo-unibg.png>]) [1
 ]
 \openout2 = `./Chapters/abstract.aux'.
 
- (./Chapters/abstract.tex) [1
+ (./Chapters/abstract.tex [1
 
-] (./Index.toc [2
+])
+\openout2 = `./Chapters/dedica.aux'.
+
+ (./Chapters/dedica.tex) [2
+
+
+] (./Index.toc [3
 
 ])
 \tf@toc=\write3
 \openout3 = `Index.toc'.
 
-
-[3]
+ [4]
 \openout2 = `./Chapters/Introduzione.aux'.
 
  (./Chapters/Introduzione.tex
@@ -416,11 +422,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
  []
 
-[4
+[5
 
-]) [5] [6
-
-]
+]) [6]
 \openout2 = `./Chapters/Tecnologie.aux'.
 
  (./Chapters/Tecnologie.tex
@@ -437,6 +441,7 @@ File: ./Images/arduino.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Images/arduino.jpg  used on input line 12.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
  [7
+
 
  <./Images/arduino.jpg>]
 <./Images/shield.jpg, id=41, 501.875pt x 501.875pt>
@@ -504,10 +509,11 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (./Code/avvio.sh) (./Code/CreazioneDB.sh) [20] (./Code/CreazioneTabella.sh)
+(./Code/ConnessioneCQLSH.sh) [21]
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-(./Code/Connessione.java) [21] (./Code/AperturaSeriale.java)
+(./Code/Connessione.java) (./Code/AperturaSeriale.java) [22]
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
@@ -517,39 +523,48 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
-(./Code/RilevamentoPresenze.cpp) (./Code/CreazioneAbbonamento.java [22])
-(./Code/ScritturaDB.java) [23]
+(./Code/RilevamentoPresenze.cpp) (./Code/CreazioneAbbonamento.java) [23]
+(./Code/ScritturaDB.java)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-(./Code/Query.sql.txt) (./Code/scritturaAbbonamento.cpp)) [24] [25
+(./Code/Query.sql.txt) [24] (./Code/scritturaAbbonamento.cpp)
+(./Code/lettura.java [25])) [26] [27] [28
 
 ]
 \openout2 = `./Chapters/sviluppiFuturi.aux'.
 
-
-(./Chapters/sviluppiFuturi.tex) [26
-
-] [27
+ (./Chapters/sviluppiFuturi.tex
+[29
 
 ]
+<./Images/cless.png, id=131, 1204.5pt x 713.66624pt>
+File: ./Images/cless.png Graphic file (type png)
+<use ./Images/cless.png>
+Package pdftex.def Info: ./Images/cless.png  used on input line 19.
+(pdftex.def)             Requested size: 240.89574pt x 142.73071pt.
+
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [30 <./Images/cless.png>] [31]) [32]
 \openout2 = `./Chapters/Biblio.aux'.
 
- (./Chapters/Biblio.tex) [28
+ (./Chapters/Biblio.tex) [33
 
-]
-(./Index.aux (./Chapters/begin.aux) (./Chapters/abstract.aux)
+
+] (./Index.aux
+(./Chapters/begin.aux) (./Chapters/abstract.aux) (./Chapters/dedica.aux)
 (./Chapters/Introduzione.aux) (./Chapters/Tecnologie.aux)
 (./Chapters/CodiceImportante.aux) (./Chapters/sviluppiFuturi.aux)
 (./Chapters/Biblio.aux)) ) 
 Here is how much of TeX's memory you used:
- 7001 strings out of 492616
- 94909 string characters out of 6129482
- 443535 words of memory out of 5000000
- 10713 multiletter control sequences out of 15000+600000
+ 7093 strings out of 492616
+ 96131 string characters out of 6129482
+ 489885 words of memory out of 5000000
+ 10788 multiletter control sequences out of 15000+600000
  11476 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,62p,790b,1795s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,62p,806b,1800s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
@@ -567,10 +582,10 @@ cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Index.pdf (30 pages, 786835 bytes).
+Output written on Index.pdf (35 pages, 838768 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 200 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

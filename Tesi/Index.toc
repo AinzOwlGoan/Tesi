@@ -1,13 +1,13 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {section}{\numberline {1}Introduzione}{4}% 
-\contentsline {subsection}{\numberline {1.1}Idea}{4}% 
-\contentsline {subsection}{\numberline {1.2}MyNBS}{4}% 
-\contentsline {paragraph}{1.}{4}% 
-\contentsline {paragraph}{2.}{4}% 
+\contentsline {section}{\numberline {1}Introduzione}{5}% 
+\contentsline {subsection}{\numberline {1.1}Idea}{5}% 
+\contentsline {subsection}{\numberline {1.2}MyNBS}{5}% 
 \contentsline {paragraph}{1.}{5}% 
 \contentsline {paragraph}{2.}{5}% 
-\contentsline {subsection}{\numberline {1.3}Obiettivo}{5}% 
+\contentsline {paragraph}{1.}{6}% 
+\contentsline {paragraph}{2.}{6}% 
+\contentsline {subsection}{\numberline {1.3}Obiettivo}{6}% 
 \contentsline {section}{\numberline {2}Strumenti utilizzati}{7}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{7}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{7}% 
@@ -61,22 +61,28 @@
 \contentsline {subsection}{\numberline {3.2}UUID}{19}% 
 \contentsline {subsubsection}{\numberline {3.2.1}Come \IeC {\`e} formato?}{19}% 
 \contentsline {subsubsection}{\numberline {3.2.2}Analisi a livello matematico}{19}% 
-\contentsline {subsection}{\numberline {3.3}Crittografia}{20}% 
-\contentsline {subsection}{\numberline {3.4}Analisi del codice}{20}% 
-\contentsline {subsubsection}{\numberline {3.4.1}Avvio del DB NoSQL}{20}% 
-\contentsline {subsubsection}{\numberline {3.4.2}Creazione del Database}{20}% 
+\contentsline {subsection}{\numberline {3.3}Analisi del codice}{20}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Avvio del Database NoSQL}{20}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Creazione del Database}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
 \contentsline {paragraph}{\IeC {\textbullet }}{20}% 
-\contentsline {subsubsection}{\numberline {3.4.3}Creazione tabella DB}{21}% 
-\contentsline {subsubsection}{\numberline {3.4.4}Connnessione al database mediante CQLSH}{21}% 
-\contentsline {subsubsection}{\numberline {3.4.5}Connessione al DB NoSQL}{21}% 
-\contentsline {subsubsection}{\numberline {3.4.6}Apertura della connessione con la porta seriale in Java}{22}% 
-\contentsline {subsubsection}{\numberline {3.4.7}Rilevamento presenza tag NFC Arduino}{22}% 
-\contentsline {subsubsection}{\numberline {3.4.8}Creazione abbonamento in Java}{22}% 
-\contentsline {subsubsection}{\numberline {3.4.9}Scrittura abbonamento nel Database}{23}% 
-\contentsline {subsubsection}{\numberline {3.4.10}Scrittura abbonamento su tag NFC }{24}% 
-\contentsline {section}{\numberline {4}Sviluppi futuri}{26}% 
-\contentsline {subsection}{\numberline {4.1}Applicazione per smartphone}{26}% 
-\contentsline {subsection}{\numberline {4.2}Apple pay, Google pay}{26}% 
-\contentsline {subsection}{\numberline {4.3}Uso di altre tecnologie}{26}% 
-\contentsline {section}{\numberline {5}Bibliografia}{28}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Creazione tabella nel Database}{21}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Connnessione al database mediante CQLSH}{21}% 
+\contentsline {subsubsection}{\numberline {3.3.5}Connessione al Database NoSQL}{22}% 
+\contentsline {subsubsection}{\numberline {3.3.6}Apertura della connessione con la porta seriale in Java}{22}% 
+\contentsline {subsubsection}{\numberline {3.3.7}Rilevamento presenza tag NFC Arduino}{23}% 
+\contentsline {subsubsection}{\numberline {3.3.8}Creazione abbonamento in Java}{23}% 
+\contentsline {subsubsection}{\numberline {3.3.9}Scrittura abbonamento nel Database}{24}% 
+\contentsline {subsubsection}{\numberline {3.3.10}Scrittura abbonamento su tag NFC }{25}% 
+\contentsline {subsubsection}{\numberline {3.3.11}Lettura dell'abbonamento Java}{25}% 
+\contentsline {section}{\numberline {4}Sviluppi futuri}{29}% 
+\contentsline {subsection}{\numberline {4.1}Applicazione per smartphone}{29}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Scelta del linguaggio}{29}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Applicazione ibrida}{29}% 
+\contentsline {subsection}{\numberline {4.2}Apple Pay, Google Pay}{30}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Che tipi di pagamenti fanno?}{30}% 
+\contentsline {subsubsection}{\numberline {4.2.2}NFC}{30}% 
+\contentsline {subsection}{\numberline {4.3}Uso di altre tecnologie}{31}% 
+\contentsline {subsubsection}{\numberline {4.3.1}BLE}{31}% 
+\contentsline {subsubsection}{\numberline {4.3.2}QR Code}{31}% 
+\contentsline {section}{\numberline {5}Bibliografia}{33}% 

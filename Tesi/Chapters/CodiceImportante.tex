@@ -54,7 +54,7 @@ Potrebbe succede che sysH cerchi di negoziare una chiave ai due sistemi però è
 \subsection{UUID}
 \hspace{\parindent}Un UUID\footnote{https://tools.ietf.org/html/rfc4122} conosciuto anche come Universally Unique Identifier, è un numero di 128 bit utilizzato per identificare informazioni nei sistemi informatici, lo si può trovare nell'rfc 4122.
 \subsubsection{Come è formato?}
-Il codice è composto da 16 byte, solitamente viene identificato da 32 caratteri esadecimali, a livello di sicurezza assume $ 3 \cdot 10^{38}$ possibili combinazioni
+\hspace{\parindent}Il codice è composto da 16 byte, solitamente viene identificato da 32 caratteri esadecimali, a livello di sicurezza assume $ 3 \cdot 10^{38}$ possibili combinazioni
 \begin{center}
 \includegraphics[scale=0.5]{uuid}
 \end{center}
@@ -72,7 +72,6 @@ p(n) \approx \frac{n^2}{2\cdot 2^x}
 \end{equation}
 Analizzandolo quindi in modo numerico potremo pensare che anche generando 1 miliardo di UUID ogni secondo per i prossimi 100 anni la probabilità di creare almeno un duplicato sarebbe circa del 50\%.
 
-\subsection{Crittografia}
 
 \subsection{Analisi del codice}
 \hspace{\parindent}In questa sezione verranno mostrati i frammenti più importanti del codice
@@ -95,10 +94,10 @@ Analizzandolo quindi in modo numerico potremo pensare che anche generando 1 mili
     tabsize=2
 }
 \lstset{style=mystyle}
-\subsubsection{Avvio del DB NoSQL}
+\subsubsection{Avvio del Database NoSQL}
 \lstinputlisting[language=bash]{./Code/avvio.sh}
 
-Automaticamente il controllore mettendo i suoi dati (validi) apre la connessione al database e va direttamente alla pagina di controllo degli abbonamenti
+Automaticamente il controllore mettendo i suoi dati (validi) apre la connessione al database e va direttamente alla pagina di controllo degli abbonamenti.
 \subsubsection{Creazione del Database}
 \lstinputlisting[language=bash]{./Code/CreazioneDB.sh}
 
@@ -108,23 +107,26 @@ La creazione del database viene fatta una sola volta, prima del rilascio dell'ap
 \paragraph{•} Fattore di replicazione
 Il primo dice dove posizionare le replica, il secondo invece determina quante repliche vengono posizionate, un esempio lo troviamo nella riga 4 dove abbiamo la stringa \textit{'replication\_factor' : 3}, questo indica che vengono fatte 3 repliche su 3 nodi diversi. Solitamente per garantire che non ci siano fallimenti il fattore di replicazione deve essere 3.
 \\Nella riga 3 vediamo la stringa \textit{'SimplyStrategy'}, questa viene usata quando abbiamo un solo data center, quindi la prima replica viene posizionata sul nodo selezionato dal partizionatore, dopo questo, le restanti repliche vengono posizionate in senso orario a partire dalla direzione del nodo.
-\subsubsection{Creazione tabella DB}
+\subsubsection{Creazione tabella nel Database}
 \lstinputlisting[language=bash]{./Code/CreazioneTabella.sh}
 
 Anche questa parte di codice, come la creazione del database viene fatta una sola volta, prima del lancio dell'applicazione
 \subsubsection{Connnessione al database mediante CQLSH}
-\subsubsection{Connessione al DB NoSQL}
+\lstinputlisting[language=bash]{./Code/ConnessioneCQLSH.sh}
+
+In questo frammento viene mostrata la connessione con CQLSH ed un esempio di query. Nella riga 3 e 4 vediamo la risposta che viene data in output non appena effettuiamo la connessione, per effettuare la connessione è obbligatorio aver attivato il database\footnote{cap 3.3.1 }, altrimenti il servizio non sarà attivo e quindi ci sarà un errore nella connessione di tipo \textit{Connection Refused}.
+\bigskip\subsubsection{Connessione al Database NoSQL}
 \lstinputlisting[language=Java]{./Code/Connessione.java}
 
 In questo frammento di codice viene mostrato il metodo con il quale viene fatta la connessione al database NoSQL Cassandra!
 \subsubsection{Apertura della connessione con la porta seriale in Java}
 \lstinputlisting[language=Java]{./Code/AperturaSeriale.java}
 
-Nel frammento di codice appena visto c'è la dichiarazione delle porte che si vanno ad utilizzare, il \textbf{DATA\_RATE}, ovvero la quantità di dati digitali che possono essere trasferiti su un canale in un determinato intervallo temporale e l'apertura della connessione tramite la funzione \textbf{portId.open}
+Nel frammento di codice appena visto c'è la dichiarazione delle porte che si vanno ad utilizzare, il \textbf{DATA\_RATE}, ovvero la quantità di dati digitali che possono essere trasferiti su un canale in un determinato intervallo temporale e l'apertura della connessione tramite la funzione \textbf{portId.open}.
 \subsubsection{Rilevamento presenza tag NFC Arduino}
 \lstinputlisting[language=c++]{./Code/RilevamentoPresenze.cpp}
 
-In questo frammento di codice viene evidenziato come il chip NFC se presente viene scannerizzato, l'unica cosa che verrà presa sarà il payload e non l'intestazione! Questo perché l'intestazione ci serve solo a sapere se il chip è formattato in formato NDEF
+In questo frammento di codice viene evidenziato come il chip NFC se presente viene scannerizzato, l'unica cosa che verrà presa sarà il payload e non l'intestazione! Questo perché l'intestazione ci serve solo a sapere se il chip è formattato in formato NDEF.
 \subsubsection{Creazione abbonamento in Java}
 \lstinputlisting[language=Java]{./Code/CreazioneAbbonamento.java}
 
@@ -133,10 +135,15 @@ Nella prima riga notiamo subito la variabile \textit{zoneatt}, in questa vi sara
 \lstinputlisting[language=Java]{./Code/ScritturaDB.java}
 
 Le righe 5 e 6 servono per definire i parametri per la connessione, quindi indirizzo IP e porta, la linea 3 serve ad istanziare l'oggetto client che sarà quello che ci permetterà la connessione al database e la linea 9 ci permetterà l'apertura della connessione col database.
-\\Andando avanti nel codice creiamo un abbonamento nel quale vengono passati i parametri da specifiche funzioni\footnote{i parametri sono presi dalla form di creazione dell'abbonamento e vengono crittografati}, per finire troviamo il comando più importante \textit{client.esegui()}, questo ci permetterà l'inserimento dei dati nel database, infatti eseguirà questo comando:
+\\Andando avanti nel codice creiamo un abbonamento nel quale vengono passati i parametri da specifiche funzioni\footnote{I parametri sono presi dalla form di creazione dell'abbonamento e vengono crittografati}, per finire troviamo il comando più importante \textit{client.esegui()}, questo ci permetterà l'inserimento dei dati nel database, infatti eseguirà questo comando:
 \begin{center}
 \lstinputlisting[language=sql]{./Code/Query.sql.txt}
 \end{center}
 \subsubsection{Scrittura abbonamento su tag NFC }
 \lstinputlisting[language=c++]{./Code/scritturaAbbonamento.cpp}
 
+In questo frammento si mostra la scrittura del messaggio sul chip NFC, importante è l'istruzione alla linea 3, dove definiamo l'oggetto \textit{NdefMessage}, che sarà esattamente il tipo del tag, la funzione invece per scrivere direttamente sul chip è alla linea 6, ed è \textit{nfc.write(message)}, dopo di questa vengono fatti controlli per verificare che effettivamente il tag sia stato scritto.
+\subsubsection{Lettura dell'abbonamento Java}
+\lstinputlisting[language=java]{./Code/lettura.java}
+
+Una delle istruzioni più importanti la troviamo nella prima linea, questa si attiva ogni volta che sulla porta seriale ci sono dei dati disponibili! Andando avanti nel codice notiamo che vengono fatti vari cicli, questi servono per identificare le zone e per vedere se effettivamente è un abbonamento di MyNBS o no.

@@ -26,8 +26,8 @@
 
 \paragraph{•}\textbf{Tipo 1}: il primo tipo è quello più semplice a causa di questo viene anche considerato come il più lento, ed essendo così semplice anche a livello di prezzo risulta essere molto economico. Il problema riguarda il fatto che certe funzionalità per delle applicazioni specifiche potrebbero mancare. Solitamente questi tag vengono usati per:
 \subparagraph{-} Applicazioni in sola lettura
-\subparagraph{-}  Accoppiamento di dispositivi bluetooth
-\subparagraph{-} Lettura di un tag specifico quando c’`e ne sono tanti
+\subparagraph{-} Accoppiamento di dispositivi bluetooth
+\subparagraph{-} Lettura di un tag specifico quando c'è ne sono tanti
 
 \paragraph{•}\textbf{Tipo 2}:
 Prima di iniziare questa sezione è bene sapere che esistono solo cinque tipi di tag standardizzati e appunto per questo il loro funzionamento è garantito con gli accessori che possediamo in questo momento. I nuovi tipi di tag richiederanno una standaridzzazione e potrebbero anche richiedere un aggiornamento dell'architettura NFC che possediamo attualmente.
@@ -69,8 +69,8 @@ Prima di iniziare questa sezione è bene sapere che esistono solo cinque tipi di
 Alle chiavi corrispondono dei valori, raggruppati in famiglie di colonne: una famiglia di colonne è definita quando il database viene creato. Tuttavia le colonne possono essere aggiunte a una famiglia in qualsiasi momento.
 \\Le colonne sono aggiunte solo specificando le chiavi, così differenti chiavi possono avere differenti numeri di colonne in una data famiglia. I valori di una famiglia di colonne sono memorizzati insieme, questo perché Cassandra adotta un approccio ibrido tra DBMS orientato alle colonne e la memorizzazione orientata alle righe.
 \\Come caratteristiche principali abbiamo:
-\paragraph{•} Fault-tolerance: i dati vengono replicati in maniera automatica su più nodi, la replica è supportata tramite vari data center e la sostituzione dei nodi può avvenire senza downtime\footnote{la replicazione verrà trattata nel capitolo 3.4.2}.
+\paragraph{•} Fault-tolerance: i dati vengono replicati in maniera automatica su più nodi, la replica è supportata tramite vari data center e la sostituzione dei nodi può avvenire senza downtime\footnote{la replicazione verrà trattata nel capitolo 3.3.2}.
 \paragraph{•} Tunable consistency: il livello di coerenza può essere modificato (da writes never fail a block for all replicas to be readable).
 \subsubsection{CQLSH}
-\hspace{\parindent}cqlsh\footnote{http://cassandra.apache.org/doc/latest/tools/cqlsh.html} è una shell a linea di comando per interagire con Cassandra attraverso il CQL (Cassandra Query Language), è inclusa con ogni versione di Cassandra, questa shell utilizza dei protocolli nativi di Python e permette la connessione al nodo specificato nella linea di comando \footnote{un esempio di connessione sarà trattato nel capitolo 3.4.4}.
+\hspace{\parindent}cqlsh\footnote{http://cassandra.apache.org/doc/latest/tools/cqlsh.html} è una shell a linea di comando per interagire con Cassandra attraverso il CQL (Cassandra Query Language), è inclusa con ogni versione di Cassandra, questa shell utilizza dei protocolli nativi di Python e permette la connessione al nodo specificato nella linea di comando \footnote{un esempio di connessione sarà trattato nel capitolo 3.3.4}.
 \\Generalmente parlando, il funzionamento di una data versione di cqlsh  è garantito solo con la versione di cassandra che lo ha rilasciato, ci possono essere casi particolari nei quali vengono rilasciati update per far lavorare un cqlsh datato con una nuova versione di Cassandra, però questo non è supportato ufficialmente.

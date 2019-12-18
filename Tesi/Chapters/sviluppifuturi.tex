@@ -1,5 +1,32 @@
 \section{Sviluppi futuri}
-In questa sezione verranno illustrati alcuni sviluppi futuri possibili per il progetto
+\hspace{\parindent}In questa sezione verranno illustrati alcuni sviluppi futuri possibili per il progetto
 \subsection{Applicazione per smartphone}
-\subsection{Apple pay, Google pay}
+\hspace{\parindent}In futuro è possibile pensare ad una realizzazione di questo progetto su smartphone, indifferentemente che siano iOS o Android, questo per il fatto che dal rilascio di iOS 13, tutti gli iPhone, a partire dal 7 sono in grado di leggere e scrivere un tag NFC, inoltre gli ultimi modelli (da iPhone XS in poi) offrono anche il supporto per la lettura in background. Inoltre tutti i dispositivi riescono a lavorare con tutti i tipi di chip\footnote{cap 2.3.1}
+\subsubsection{Scelta del linguaggio}
+\hspace{\parindent}Una delle cose fondamentali per l'applicazione riguarda la scelta del linguaggio, si potrebbe pensare a due sviluppatori che sviluppano due app diverse, quindi uno con \textbf{swift} e l'altro con \textbf{java}, oppure si può pensare ad un team di sviluppatori che lavora insieme ad uno stesso progetto utilizzando per esempio \textbf{flutter} oppure anche \textbf{kotlin}.
+\subsubsection{Applicazione ibrida}
+\hspace{\parindent}SI potrebbe pensare anche al fatto di creare un'applicazione ibrida, quindi un'applicazione per il dispositivo che però è stata scritta con il linguaggio web, quindi HTML5, CSS e Javascript. Le applicazioni ibride vengono eseguite dentro un \textit{native container}, e per renderizzare il codice HTML e per processare la logica Javascript, sfruttano il motore del browser, ma non direttamente il browser stesso, questo è reso possibile dal fatto che è implementato un livello di astrazione web-to-native, che permette di accedere alle funzioni del dispositivo che non sarebbero accessibili dalle applicazioni Web mobile.
+
+\subsection{Apple Pay, Google Pay}
+\hspace{\parindent}Sono due strumenti di pagamento innovativi che permettono di pagare tramite lo smartphone e smartwatch
+
+\subsubsection{Che tipi di pagamenti fanno?}
+\hspace{\parindent}Possono essere fatti pagamenti via mobile, pagamenti in app e pagamenti via web.
+\\Parlando di Apple Pay, permette di pagare con iPhone, iPad e Apple Watch ove previsto, invece Google Pay, funziona su tutti i sistemi Android con un OS pari o superiore ad Android 5, funziona inoltre con gli smartwatch Wear Os che hanno tecnologia NFC. Entrambi offrono la possibilità di fare acquisti in app. La differenza sostanziale sta nei pagamenti via web, infatti per Apple Pay i pagamenti possono avvenire solo su safari e molte volte devono essere confermati tramite lo smartphone, invece per Google Pay, si possono usare diversi broswer, ed essendo già l'account di google già collegato, il pagamento risulta più semplice da fare. 
+\subsubsection{NFC}
+\hspace{\parindent}La tecnologia principale per usarli è quella NFC, in sostanza dopo che viene attivato il servizio, bisogna soltanto avvicinare il dispositivo ad un terminale di pagamento (POS), e il pagamento verrà effettuato, ultimamente basta trovare il simbolo di contactless, e si può usare il dispositivo senza problemi!
+\begin{center}
+\includegraphics[scale=0.2]{./Images/cless}
+\end{center}
+
 \subsection{Uso di altre tecnologie}
+\hspace{\parindent}In questa sezione verranno mostrate altre tecnologie con relativi commenti
+\subsubsection{BLE}
+\hspace{\parindent}BLE, conosciuto anche come bluetooth low energy, è una delle tecnologie di prossimità che sta ricevendo molte attenzioni in questi ultimi anni, viene anche chiamata Bluetooth Smart. Funziona insaturando dei becaon che vengono utilizzati per identificare il dispositivo e comunicare con quest'ultimo. Pensiamo al lettore RFID, questo deve essere sempre attivo e mandare il suo segnale in broadcast, mentre per il BLE, l'utente deve obbligatoriamente attivare il bluetooth del dispositivo. Inoltre, l'utente in molti dispositivi è obbligato a scaricare un'applicazione per ricevere e inviare messaggi.
+\\Un esempio di uso del BLE per l'applicazione vista è quando l'utente sale su un autobus, passando attraverso le porte, con l'app attiva, viene subito riconosciuto se l'utente è salito nella zona giusta o è in una zona non prevista per il suo abbonamento. Uno svantaggio però risiede nel fatto che attualmente usando il BLE non si possono effettuare acquisti.
+\\La differenza tra NFC e BLE, riguarda sia l'infrastruttura che i compiti svolti, BLE infatti riesce a lavorare anche a distanze di circa 50 metri, trasferisce più dati però richiede un'infrastruttura dedicata da installare per il suo funzionamento, e per quanto riguarda la UX\footnote{User Experience} bisognerebbe avere un'app installata. NFC invece necessita solo di un lettore, implementato anche in uno smartposter oltre che in uno smartphone, l'utente necessita quindi solo di avvicinare il telefono per far succedere qualcosa, inoltre con NFC è possibile effettuare i pagamenti.
+\subsubsection{QR Code}
+\hspace{\parindent}Un'altra alternativa al chip NFC sono i QR Code, i loro vantaggi risiedono nel fatto che sono facilmente stampabili e hanno un costo molto ridotto, inoltre puoi metterli quasi ovunque, lo svantaggio però è che devi avere un'app\footnote{Gli smartphone di ultima generazione hanno questa funzione integrata nella fotocamera, quindi non serve un'app dedicata }, aprirla, scannerizzarlo e dopo questo sarà visibile il contenuto. Un'altro svantaggio è dato dal fatto che luci cattive o l'inchiostro che svanisce possono dar problemi per la lettura. NFC invece differisce per il fatto che direttamente dallo smartphone, quando tu lo vai ad attivare l'unica cosa che devi fare è avvicinare lo smartphone e il gioco è fatto.
+\\Sul mercato però ci sono anche smartphone che non supportano l'NFC, che però possono interagire tranquillamente con i QR Code, quindi in questo caso si andrebbe a verificare una perdita d'efficienza per il servizio smartphone e NFC. C'è da dire che con il QR non si può effettuare alcun pagamento, quindi l'idea per l'implementazione risiederebbe nella parte della Creazione dell'abbonamento, quindi scannerizzando un QR Code si viene portati ad una pagina internet o in un'applicazione dove si dovrà creare un'utenza e da lì sarà possibile effettuare il pagamento.
+
+
